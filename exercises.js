@@ -404,8 +404,17 @@ for (var i = 1; i<6; i++){
  * The function will loop through and add up all the values in the array that is passed into the function and return the total.
  * Console.log your result.
 */
+var numArray = [56, 3, 15, 23, 11];
+var total = 0;
 
+function sumItUp(arr){
+  for (var i = 0; i<arr.length; i++){
+    total += arr[i];
+  }
+  return total;
 
+}
+console.log(sumItUp(numArray));
 
 /*
  * #18
@@ -420,6 +429,23 @@ for (var i = 1; i<6; i++){
 */ 
 
 var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Sidney Deane", "World B Free"];
+
+function allStars(ballers){
+  var east = [];
+  var west = [];
+  for (var i = 0; i<ballers.length; i++){
+    if (i%2 === 0){
+      // console.log(ballers[i])
+      east.push(ballers[i]);
+    } else{
+      west.push(ballers[i]);
+    }
+  }
+  console.log(east);
+  console.log(west);
+}
+allStars(players);
+
 /*
  * #19
  * Function - subways
@@ -433,6 +459,18 @@ var players = ["Yao Ming", "BrookLin", " Jesus Shuttlesworth", "Manute Bol", "Si
 */ 
 
   var subOftheDay = ["Teriyaki Chicken", "Spicy Italian", "Turkey", "BMT", "Black Forest Ham", "Meatball Marinara", "Veggie"];
+
+  function subways(special){
+    for (var i = 0; i<special.length; i++){
+      if(i%2 === 1){
+        // console.log(special[i]);
+        special.splice(i, i, "Classic Tuna");
+      }
+    }
+    console.log(special);
+}
+
+subways(subOftheDay);
 
 
 /*
@@ -449,10 +487,32 @@ Final Boss
 
 var phrase = "An apple a day keeps Alice feeling awesome!";
  
-  
-  
+function removeLetter(str){
+  var newArr = [];
+     for (var i = 0; i<str.length; i++){
+     //console.log(str[i])
+      if(str[i] !== "A" && str[i] !== "a"){
+      //  console.log(str[i])
+        newArr.push(str[i]);    
+    }
+  }
+    console.log(newArr);
+}  
+
+removeLetter(phrase);
 
 
+// function removeLetter(str){
+//   var newStr = " ";
+//   for (var i = 0; i<str.length; i++){
+//     if(str[i] !== "A" && str[i] !== "a"){
+//      newStr += str[i]; 
+//     }
+//   }
+//   console.log(newStr);
+// }
+
+// removeLetter(phrase);
 
 
 
