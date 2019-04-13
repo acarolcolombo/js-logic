@@ -311,9 +311,9 @@ var doughnutPrice = 3;
 var doughnutBought = 0;
 
 function buyDoughnut(){
-  if (budget > doughnutPrice){
-    budget = budget - doughnutPrice; 
-    doughnutBought = doughnutBought + 1;
+  if (budget >= doughnutPrice){
+    budget = budget - doughnutPrice; //budget -= donutPrice;
+    doughnutBought = doughnutBought + 1; //donutBought++;
     return "My budget is " + budget + " and I bought " + doughnutBought + " donuts."
   } else {
     return "Sorry you can't buy it.";
@@ -321,6 +321,11 @@ function buyDoughnut(){
 }
 console.log(buyDoughnut());
 console.log(buyDoughnut());
+
+//another way to do it:
+//buyDoughnut()
+//console.log(budget)
+//console.log(doughnutBought)
 
 /*Final Boss*/
 /*Create a function name dailySpecials which takes in a parameter: `special`.
